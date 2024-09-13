@@ -39,7 +39,7 @@ const pessoa7 = {
   // oque vou executar aqui embaixo, dentro desse objeto é uma função, NÃO É NESCESSARIO COLOCAR O FUNCTION E,
   // NEM O '=>' , VEJA ABAIXO :
   fala() {
-    console.log(`${this.nome} ${this.sobrenome} Falou Olá!`);
+    console.log(`${this.nome} ${this.sobrenome} Falou Olá!`); //o this serve para acessar um parametro que está dentro o objeto
   }
   // tambem posso colocar outra função, nao há limite de funções que possamos colocar noes objetos;
   //    incrementaIdade() {

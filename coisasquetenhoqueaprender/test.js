@@ -269,12 +269,72 @@ No código acima, o `return` é implícito e o bloco `{}` é omitido.
 
 O `reduce` é uma ferramenta poderosa para transformar e resumir dados em arrays de maneira flexível e eficiente. */
 
+
 // TENPLATE LITERALS
 
-const name = null;
-const message = `Bem vindo, ${name ?? 'visitante'}`
-document.body.innerText = message;
+// const name = null;
+// const message = `Bem vindo, ${name ?? 'visitante'}`
+// document.body.innerText = message;
 
 
+// PROMISSES
+/*
+Uma promise (promessa) é um objeto que representa a eventual conclusão (ou falha) de uma operação assíncrona.
+ Então, ela não promete que algo vai dar errado, mas sim que pode dar certo ou errado.
+ */
 
+// .then/ .catch
 
+//   const somaDoisNumeros = (a,b) => {
+//    return new Promise ((resolve,reject)=>{ // esse 'resolve' é uma função pra chamar quando deu tudo certo, já o reject é uma função pra chamar quando deu errado.
+//       setTimeout(() =>{
+//          resolve(a+b);
+//       },2000);
+//    });
+//   } 
+// somaDoisNumeros(1,3)
+// .then(soma =>{ //O then é chamado quando a promise é resolvida (ou seja, quando resolve é chamado).
+//    document.body.innerText = soma
+// })
+// .catch(err =>{ //  O catch é usado para lidar com erros que ocorrem quando a promise é rejeitada (ou seja, quando reject é chamado).
+//    console.log(err);
+// })
+
+// fetch('https://api.github.com/MoisesBarrosDev')
+// .then( Response => {
+//    return Response.json();
+// })
+// .then(body=>{
+//    console.log(body);
+// })
+// // .then(response =>{
+// //    response.json().then(body =>{
+// //       console.log(body)
+// //    })
+// // })
+// .catch(err => {
+//    console.log(err)
+// })
+// .finally(()=>{
+//    console.log('Funcionou!')
+// })
+
+// tem desse jeito a importação. 
+//  import {souu, sub, PI} from './lib/math.js';
+// import lu from './lib/lu.js';
+// console.log(souu(1,2))
+// console.log(sub(2,1))
+// console.log(PI)
+// console.log(lu(3,5))
+// Named Export é uma forma de exportar múltiplas funções, objetos ou variáveis de um módulo em JavaScript. 
+// Ao usar named exports, você pode exportar várias entidades de um único arquivo,
+// permitindo que outros módulos importem apenas o que precisam.
+
+// e tem esse outro jeito de importação veja abaixo:
+// nesse caso ele esta importando tudo dentro de um  arquivo dentro de uma unica variavel. o nome da variavel é math.
+// import * as math from './lib/math.js'
+// console.log(math.souu(1,2))
+
+// caso queira chamar a variavel e renomear o nome dela veja abaixo:
+// import {souu as uv} from'./lib/math.js'
+// console.log(uv(1,3))
